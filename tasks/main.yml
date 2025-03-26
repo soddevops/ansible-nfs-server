@@ -1,11 +1,11 @@
 ---
 # tasks file for ansible-nfs-server
-- include_tasks: set-facts.yml
+- ansible.builtin.include_tasks: set-facts.yml
 
-- include_tasks: debian.yml
+- ansible.builtin.include_tasks: debian.yml
   when: ansible_os_family == "Debian"
 
-- include_tasks: redhat.yml
+- ansible.builtin.include_tasks: redhat.yml
   when: ansible_os_family == "RedHat"
 
-- include_tasks: config.yml
+- ansible.builtin.include_tasks: config.yml
